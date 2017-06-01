@@ -7,13 +7,13 @@ namespace EfFirebird.Model.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Initial : IMigrationMetadata
+    public sealed partial class NewStringProperty : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(NewStringProperty));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706011215543_Initial"; }
+            get { return "201706011301420_NewStringProperty"; }
         }
         
         string IMigrationMetadata.Source

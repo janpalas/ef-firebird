@@ -1,19 +1,34 @@
-using System.Data.Entity.Migrations;
 using EfFirebird.Model.Entities;
 
 namespace EfFirebird.Model.Migrations
 {
-    
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BookstoreDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<EfFirebird.Model.BookstoreDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(BookstoreDbContext context)
+        protected override void Seed(EfFirebird.Model.BookstoreDbContext context)
         {
+            //  This method will be called after migrating to the latest version.
+
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
+
             var nesbo = new Author { FirstName = "Jo", LastName = "Nesbo" };
             var larsson = new Author { FirstName = "Stieg", LastName = "Larsson" };
 

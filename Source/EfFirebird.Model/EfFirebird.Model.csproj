@@ -33,8 +33,14 @@
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework.Firebird, Version=5.9.1.0, Culture=neutral, PublicKeyToken=42d22d092898e5f8, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Firebird.5.9.1\lib\net452\EntityFramework.Firebird.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=5.9.1.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.5.9.1\lib\net452\FirebirdSql.Data.FirebirdClient.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -50,9 +56,17 @@
     <Compile Include="BookstoreDbContext.cs" />
     <Compile Include="Entities\Author.cs" />
     <Compile Include="Entities\Book.cs" />
-    <Compile Include="Migrations\201706011215543_Initial.cs" />
-    <Compile Include="Migrations\201706011215543_Initial.Designer.cs">
-      <DependentUpon>201706011215543_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201706011258378_InitialCreate.cs" />
+    <Compile Include="Migrations\201706011258378_InitialCreate.Designer.cs">
+      <DependentUpon>201706011258378_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706011301070_NewProperty.cs" />
+    <Compile Include="Migrations\201706011301070_NewProperty.Designer.cs">
+      <DependentUpon>201706011301070_NewProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706011301420_NewStringProperty.cs" />
+    <Compile Include="Migrations\201706011301420_NewStringProperty.Designer.cs">
+      <DependentUpon>201706011301420_NewStringProperty.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,8 +76,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706011215543_Initial.resx">
-      <DependentUpon>201706011215543_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706011258378_InitialCreate.resx">
+      <DependentUpon>201706011258378_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706011301070_NewProperty.resx">
+      <DependentUpon>201706011301070_NewProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706011301420_NewStringProperty.resx">
+      <DependentUpon>201706011301420_NewStringProperty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
