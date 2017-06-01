@@ -12,7 +12,7 @@ namespace EfFirebird.Model.Tests.Tests
         [OneTimeSetUp]
         public void FixtureSetUp()
         {
-            Database.SetInitializer(new BookstoreDbInitializer());
+            //Database.SetInitializer(new BookstoreDbInitializer());
         }
 
         [SetUp]

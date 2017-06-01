@@ -50,11 +50,21 @@
     <Compile Include="BookstoreDbContext.cs" />
     <Compile Include="Entities\Author.cs" />
     <Compile Include="Entities\Book.cs" />
+    <Compile Include="Migrations\201706011215543_Initial.cs" />
+    <Compile Include="Migrations\201706011215543_Initial.Designer.cs">
+      <DependentUpon>201706011215543_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706011215543_Initial.resx">
+      <DependentUpon>201706011215543_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

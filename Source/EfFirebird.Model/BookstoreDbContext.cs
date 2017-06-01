@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using EfFirebird.Model.Entities;
+using EfFirebird.Model.Migrations;
 
 namespace EfFirebird.Model
 {
@@ -10,6 +11,7 @@ namespace EfFirebird.Model
 
         public BookstoreDbContext()
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<BookstoreDbContext, Configuration>());
         }
     }
 }
